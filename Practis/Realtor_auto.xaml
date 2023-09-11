@@ -1,0 +1,47 @@
+﻿<Window x:Class="Practis.Realtor_auto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practis"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Icon="C:\Users\dick\source\repos\Practis\Practis\bin\Hopstarter-Sleek-Xp-Basic-Preppy.ico"
+        Title="Авторизация риелтора" Height="450" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!--    Лого    -->
+        <Image Margin="5,5,420,145" Grid.ColumnSpan="3" Source="C:\Users\dick\source\repos\Practis\Practis\bin\logo.png"/>
+
+        <!--    Название    -->
+        <TextBlock Text="Авторизация риелтора" TextAlignment="Center" FontSize="50" TextWrapping="Wrap" Grid.ColumnSpan="3" Margin="0,15,0,0"/>
+
+        <!--    Авторизация    -->
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="First_name" Grid.Row="0" Text="Фамилия" FontSize="23" Foreground="Gray" Margin="5"/>
+            <TextBlock Grid.Row="1" Text="И" FontSize="25" FontWeight="Medium" TextAlignment="Center"/>
+            <TextBox x:Name="Middle_name" Grid.Row="2" Text="Имя"  FontSize="23" Foreground="Gray" Margin="5"/>
+        </Grid>
+        
+        <!--    Вход    -->
+        <Grid Grid.Column="1" Grid.Row="3">
+            <Button Content="Авторизоваться" Click="Realtor_auto_b" FontSize="23" FontWeight="Medium" Margin="20"/>
+        </Grid>
+    </Grid>
+</Window>

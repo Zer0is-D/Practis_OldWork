@@ -1,0 +1,37 @@
+﻿<Window x:Class="Practis.Edit_sell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Edit_sell" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="550"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Image Margin="5,5,5,50" Source="C:\Users\dick\source\repos\Practis\Practis\bin\logo.png"/>
+        <TextBlock Text="Редактирование продажи" Grid.ColumnSpan="4" TextAlignment="Center" FontSize="40" Margin="10"/>
+
+        <GroupBox Grid.Column="1" Grid.Row="3" Header="Выбранная сделака">
+            <ComboBox x:Name="Sell_deal"/>
+        </GroupBox>
+
+        <TextBox Grid.Column="1" Grid.Row="2" Text="Стоимость"/>
+
+        <GroupBox Grid.Column="1" Grid.Row="1" Header="Продаваемый объект">
+            <ComboBox/>
+        </GroupBox>
+
+        <Button Grid.Column="2" Grid.Row="4" Content="Оформить" Margin="10" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

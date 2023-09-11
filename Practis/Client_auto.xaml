@@ -1,0 +1,54 @@
+﻿<Window x:Class="Practis.Client_auto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practis"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Icon="C:\Users\dick\source\repos\Practis\Practis\bin\Hopstarter-Sleek-Xp-Basic-Preppy.ico"
+        Title="Авторизация клиента" Height="450" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!--    Лого    -->
+        <Image Margin="5,5,5,120" Source="C:\Users\dick\source\repos\Practis\Practis\bin\logo.png"/>
+
+        <!--    Название    -->
+        <TextBlock Text="Авторизация клиента" TextAlignment="Center" FontSize="50" Grid.ColumnSpan="3" Margin="0,60,0,0"/>
+        
+
+        <!--    Поля ввода    -->
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="35"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="First_name" Grid.Row="0" Text="Фамилия" FontSize="25" Foreground="Gray" Margin="10"/>
+            <TextBlock Grid.Row="1" Text="И" FontSize="25" FontWeight="Medium" TextAlignment="Center"/>
+            <TextBox x:Name="Middle_name" Grid.Row="2" Text="Имя" FontSize="25" Foreground="Gray" Margin="10"/>
+        </Grid>
+        
+        
+        <!--    Авторизация    -->
+        <Grid Grid.Column="1" Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1" Click="Client_auto_b" Content="Авторизоваться" FontSize="25" FontWeight="Medium" Margin="5"/>
+        </Grid>
+    </Grid>
+</Window>

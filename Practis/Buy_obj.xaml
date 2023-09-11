@@ -1,0 +1,169 @@
+﻿<Window x:Class="Practis.Buy_obj"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practis"
+        mc:Ignorable="d"
+        Title="Buy_obj" Height="500" Width="500">
+    <Grid>
+        <TabControl TabStripPlacement="Left">
+            <TabItem Header="Квартира" FontSize="16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Text="Адрес" FontSize="30" TextAlignment="Center"/>
+
+                    <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,5,10,5">
+                        <TextBox Text="Город" Margin="0,0,0,5" x:Name="A_address_city"/>
+                        <TextBox Text="Улица" Margin="0,0,0,5" x:Name="A_address_street"/>
+                        <TextBox Text="Номер дома" Margin="0,0,0,5" x:Name="A_address_house"/>
+                    </StackPanel>
+
+
+                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Мин. стоимость"/>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Text="Макс. стоимость"/>
+                    <TextBox Grid.Column="0" Grid.Row="3" Text="0" Margin="4" x:Name="A_min_price"/>
+                    <TextBox Grid.Column="2" Grid.Row="3" Text="100" Margin="4" x:Name="A_max_price"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="4" Text="Мин. комнат"/>
+                    <TextBlock Grid.Column="2" Grid.Row="4" Text="Макс. комнат"/>
+                    <TextBox Grid.Column="0" Grid.Row="5" Margin="4" x:Name="A_min_rooms"/>
+                    <TextBox Grid.Column="2" Grid.Row="5" Margin="4" x:Name="A_max_rooms"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="6" Text="Мин. площадь"/>
+                    <TextBlock Grid.Column="2" Grid.Row="6" Text="Макс. площадь"/>
+                    <TextBox Grid.Column="0" Grid.Row="7" Margin="4" x:Name="A_min_area"/>
+                    <TextBox Grid.Column="2" Grid.Row="7" Margin="4" x:Name="A_max_area"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="8" Text="Мин. этаж"/>
+                    <TextBlock Grid.Column="2" Grid.Row="8" Text="Макс. этаж"/>
+                    <TextBox Grid.Column="0" Grid.Row="9" Margin="4" x:Name="A_min_floor"/>
+                    <TextBox Grid.Column="2" Grid.Row="9" Margin="4" x:Name="A_max_floor"/>
+
+                    <ComboBox x:Name="Apart_realtor" Grid.Row="11" Text="Риелтор"/>
+                    <Button Grid.Column="2" Grid.Row="11" Content="Оформление" Click="Apartment_insert"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Дом" FontSize="16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Text="Адрес" FontSize="30" TextAlignment="Center"/>
+
+                    <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,5,10,5">
+                        <TextBox Text="Город" Margin="0,0,0,5" x:Name="H_address_city"/>
+                        <TextBox Text="Улица" Margin="0,0,0,5" x:Name="H_address_street"/>
+                    </StackPanel>
+
+                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Мин. стоимость"/>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Text="Макс. стоимость"/>
+                    <TextBox Grid.Column="0" Grid.Row="3" Text="0" Margin="4" x:Name="H_min_price"/>
+                    <TextBox Grid.Column="2" Grid.Row="3" Text="100" Margin="4" x:Name="H_max_price"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="4" Text="Мин. комнат"/>
+                    <TextBlock Grid.Column="2" Grid.Row="4" Text="Макс. комнат"/>
+                    <TextBox Grid.Column="0" Grid.Row="5" Margin="4" x:Name="H_min_rooms"/>
+                    <TextBox Grid.Column="2" Grid.Row="5" Margin="4" x:Name="H_max_rooms"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="6" Text="Мин. площадь"/>
+                    <TextBlock Grid.Column="2" Grid.Row="6" Text="Макс. площадь"/>
+                    <TextBox Grid.Column="0" Grid.Row="7" Margin="4" x:Name="H_min_area"/>
+                    <TextBox Grid.Column="2" Grid.Row="7" Margin="4" x:Name="H_max_area"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="8" Text="Мин. этажей"/>
+                    <TextBlock Grid.Column="2" Grid.Row="8" Text="Макс. этажей"/>
+                    <TextBox Grid.Column="0" Grid.Row="9" Margin="4" x:Name="H_min_floors"/>
+                    <TextBox Grid.Column="2" Grid.Row="9" Margin="4" x:Name="H_max_floors"/>
+
+                    <ComboBox x:Name="House_realtor" Grid.Row="11" Text="Риелтор"/>
+                    <Button Grid.Column="2" Grid.Row="11" Content="Оформление" Click="House_insert"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Участок" FontSize="16">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="38"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Text="Адрес" FontSize="30" TextAlignment="Center"/>
+
+                    <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,5,10,5">
+                        <TextBox Text="Город" Margin="0,0,0,5" x:Name="L_address_city"/>
+                        <TextBox Text="Улица" Margin="0,0,0,5" x:Name="L_address_street"/>
+                    </StackPanel>
+
+                    <TextBlock Grid.Column="0" Grid.Row="2" Text="Мин. стоимость"/>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Text="Макс. стоимость"/>
+                    <TextBox Grid.Column="0" Grid.Row="3" Text="0" Margin="4" x:Name="L_min_price"/>
+                    <TextBox Grid.Column="2" Grid.Row="3" Text="100" Margin="4" x:Name="L_max_price"/>
+
+                    <TextBlock Grid.Column="0" Grid.Row="4" Text="Мин. площадь"/>
+                    <TextBlock Grid.Column="2" Grid.Row="4" Text="Макс. площадь"/>
+                    <TextBox Grid.Column="0" Grid.Row="5" Margin="4" x:Name="L_min_area"/>
+                    <TextBox Grid.Column="2" Grid.Row="5" Margin="4" x:Name="L_max_area"/>
+
+                    <ComboBox x:Name="Land_realtor" Grid.Row="11" Text="Риелтор"/>
+                    <Button Grid.Column="2" Grid.Row="11" Content="Оформление" Click="Land_insert"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

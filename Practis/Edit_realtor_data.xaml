@@ -1,0 +1,32 @@
+﻿<Window x:Class="Practis.Edit_realtor_data"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practis"
+        mc:Ignorable="d"
+        Title="Edit_realtor_data" Height="350" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <!--    Заголовок    -->
+        <TextBlock Text="Редактирование записи" FontSize="30" TextAlignment="Center" />
+
+        <!--    Данные    -->
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <TextBox x:Name="First_name"  Text="Фамилия"    FontSize="22" Margin="20,5,20,5"/>
+                <TextBox x:Name="Middle_name" Text="Имя"        FontSize="22" Margin="20,5,20,5"/>
+                <TextBox x:Name="Last_name"   Text="Отчество"   FontSize="22" Margin="20,5,20,5"/>
+                <TextBox x:Name="Deal"        Text="Процент"    FontSize="22" Margin="20,5,20,5"/>
+            </StackPanel>
+        </Grid>
+
+        <!--    Кнопка (Вау)    -->
+        <Button Grid.Row="2" Content="Изменить данные" FontSize="20" FontStretch="Medium" Margin="20,10,20,10" Click="Button_Click"/>
+    </Grid>
+</Window>
